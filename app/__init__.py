@@ -3,6 +3,7 @@ from app.config import Config
 # TODO: import flask_sqlalchemy
 # TODO: import flask_login
 from flask_wtf.csrf import CSRFProtect
+from os import path
 
 
 
@@ -15,7 +16,7 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)
     
     
-    from .models import Users
+    # from .models import Users
 
     with app.app_context():
         # TODO: initialise sqlalchemy db here
